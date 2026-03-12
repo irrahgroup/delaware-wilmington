@@ -1,2 +1,2 @@
-# delaware-wilmington
-Nodes nativos N8N - Gpt Maker
+# n8n-nodes-gptmaker
+n8n-nodes-gptmaker
