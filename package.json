@@ -1,6 +1,6 @@
 {
   "name": "@gptmaker/n8n-nodes-gptmaker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom n8n node for GPTMaker API",
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
     "n8n-community-node-package"
   ],
   "author": {
-    "name": "Irrah Tech"
+    "name": "Irrah Tech",
+    "email": "arquitetura@gptmaker.ai"
   },
   "license": "MIT",
   "publishConfig": {
