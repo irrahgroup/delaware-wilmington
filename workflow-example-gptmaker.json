@@ -1,0 +1,45 @@
+{
+  "name": "GPTMaker - List agents by workspace",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        220,
+        320
+      ],
+      "name": "Manual Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "agent",
+        "operation": "getAll",
+        "workspaceId": "YOUR_WORKSPACE_ID"
+      },
+      "type": "@gptmaker/n8n-nodes-gptmaker.gptMaker",
+      "typeVersion": 1,
+      "position": [
+        520,
+        320
+      ],
+      "name": "List Agents"
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "List Agents",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@gptmaker/n8n-nodes-gptmaker",
+  "version": "1.0.0",
+  "description": "Custom n8n node for GPTMaker API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irrahgroup/delaware-wilmington.git"
+  },
+  "homepage": "https://github.com/irrahgroup/delaware-wilmington#readme",
+  "bugs": {
+    "url": "https://github.com/irrahgroup/delaware-wilmington/issues"
+  },
+  "main": "dist/nodes/GptMaker/GptMaker.node.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npx rimraf dist && tsc && node -e \"const fs=require('fs'); fs.mkdirSync('dist/nodes/GptMaker',{ recursive: true }); fs.copyFileSync('nodes/GptMaker/GptMaker.svg','dist/nodes/GptMaker/GptMaker.svg');\"",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix"
+  },
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "author": {
+    "name": "Irrah Tech"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.0.0"
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.22.0",
+    "@types/node": "^18.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/GptMaker/GptMaker.node.js"
+    ],
+    "credentials": [
+      "dist/nodes/GptMaker/GptMakerApi.credentials.js"
+    ]
+  }
+}
