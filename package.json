@@ -1,6 +1,6 @@
 {
   "name": "@gptmaker/n8n-nodes-gptmaker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom n8n node for GPTMaker API",
   "repository": {
     "type": "git",
