@@ -1,4 +1,4 @@
-import { ICredentialType, INodeProperties } from 'n8n-workflow';
+import { ICredentialTestRequest, ICredentialType, INodeProperties } from 'n8n-workflow';
 
 export class GptMakerApi implements ICredentialType {
 	name = 'gptMakerApi';
@@ -6,8 +6,8 @@ export class GptMakerApi implements ICredentialType {
 	displayName = 'GPTMaker API';
 
 	icon = {
-		light: 'file:GptMaker.svg',
-		dark: 'file:GptMaker.svg',
+		light: 'file:../nodes/GptMaker/GptMaker.svg',
+		dark: 'file:../nodes/GptMaker/GptMaker.svg',
 	} as const;
 
 	documentationUrl = 'https://developer.gptmaker.ai/';
@@ -34,11 +34,11 @@ export class GptMakerApi implements ICredentialType {
 		},
 	} as const;
 
-	test = {
+	test: ICredentialTestRequest = {
 		request: {
 			baseURL: 'https://api.gptmaker.ai',
 			url: '/v2/workspaces',
 			method: 'GET',
 		},
-	} as const;
+	};
 }
