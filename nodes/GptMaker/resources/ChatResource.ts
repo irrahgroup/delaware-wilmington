@@ -47,13 +47,13 @@ export async function chatExecute(node: IExecuteFunctions, operation: string, i:
 			break;
 		}
 
-		case 'assumirAtendimento': {
+		case 'takeOverSupport': {
 			const chatId = node.getNodeParameter('chatId', i) as string;
 			responseData = await gptMakerApiRequest.call(node, 'PUT', `/v2/chat/${chatId}/start-human`);
 			break;
 		}
 
-		case 'encerrarAtendimento': {
+		case 'endHumanSupport': {
 			const chatId = node.getNodeParameter('chatId', i) as string;
 			responseData = await gptMakerApiRequest.call(node, 'PUT', `/v2/chat/${chatId}/stop-human`);
 			break;

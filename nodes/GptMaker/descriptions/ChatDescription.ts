@@ -38,7 +38,7 @@ export const chatOperations: INodeProperties[] = [
 			},
 			{
 				name: 'End Human Support',
-				value: 'encerrarAtendimento',
+				value: 'endHumanSupport',
 				action: 'End human support',
 				description: 'End human support (PUT /v2/chat/{chatId}/stop-human)',
 			},
@@ -62,7 +62,7 @@ export const chatOperations: INodeProperties[] = [
 			},
 			{
 				name: 'Take Over Support',
-				value: 'assumirAtendimento',
+				value: 'takeOverSupport',
 				action: 'Take over support',
 				description: 'Mark that a human will take over the support (PUT /v2/chat/{chatId}/start-human)',
 			},
